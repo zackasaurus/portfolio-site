@@ -1,21 +1,42 @@
 import './index.css';
 import * as dat from 'dat-gui'
 
-const gui = new dat.GUI()
+// const gui = new dat.GUI()
 
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
+function getScrollbarWidth() {
 
+    // Creating invisible container
+    const outer = document.createElement('div');
+    outer.style.visibility = 'hidden';
+    outer.style.overflow = 'scroll'; // forcing scrollbar to appear
+    outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
+    document.body.appendChild(outer);
 
-canvas.width = window.innerWidth
+    // Creating inner element and placing it in the container
+    const inner = document.createElement('div');
+    outer.appendChild(inner);
+
+    // Calculating difference between container's full width and the child width
+    const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
+
+    // Removing temporary elements from the DOM
+    outer.parentNode.removeChild(outer);
+
+    return scrollbarWidth;
+
+}
+
+canvas.width = window.innerWidth - getScrollbarWidth()
 canvas.height = window.innerHeight
 
 let resizeCanvas = function () {
-    canvas.width = window.innerWidth
+    canvas.width = window.innerWidth - getScrollbarWidth()
     canvas.height = window.innerHeight
-    c.imageSmoothingEnabled = false;
+    c.imageSmoothingEnabled = true;
 }
 
 window.addEventListener('resize', function () {
@@ -48,11 +69,11 @@ const props = {
     magnitude: 1
 }
 
-gui.add(props, 'start', 0, canvas.height)
-gui.add(props, 'length', -.03, .03)
-gui.add(props, 'amp', 0, 100)
-gui.add(props, 'duration', -.01, .1)
-gui.add(props, 'magnitude', 1, 2)
+// gui.add(props, 'start', 0, canvas.height)
+// gui.add(props, 'length', -.03, .03)
+// gui.add(props, 'amp', 0, 100)
+// gui.add(props, 'duration', -.01, .1)
+// gui.add(props, 'magnitude', 1, 2)
 
 // let direction = true
 let increment = props.duration
@@ -60,9 +81,7 @@ let increment = props.duration
 
 function animate() {
 
-    // if (change % 20 === 0) {
-    //     directionChange()
-    // }
+
     requestAnimationFrame(animate)
 
 
