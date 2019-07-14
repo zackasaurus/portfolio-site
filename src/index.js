@@ -30,12 +30,14 @@ function getScrollbarWidth() {
 
 }
 
+let h = 600
+
 canvas.width = window.innerWidth - getScrollbarWidth()
-canvas.height = window.innerHeight
+canvas.height = h
 
 let resizeCanvas = function () {
     canvas.width = window.innerWidth - getScrollbarWidth()
-    canvas.height = window.innerHeight
+    canvas.height = h
     c.imageSmoothingEnabled = true;
 }
 
@@ -43,39 +45,14 @@ window.addEventListener('resize', function () {
     resizeCanvas()
 })
 
-// window.onresize
-
-// const props = {
-//     start: canvas.height * 0.8,
-//     length: 0.0007,
-//     amp: 40,
-//     duration: 0.015,
-//     magnitude: 1.15
-// }
-
-// const props = {
-//     start: canvas.height * 0.8,
-//     length: 0.0007,
-//     amp: 60,
-//     duration: 0.007,
-//     magnitude: 1.2
-// }
-
 const props = {
-    start: canvas.height * 0.6,
+    start: canvas.height * 0.8,
     length: 0.0003,
     amp: 0,
     duration: 0.003,
     magnitude: 1
 }
 
-// gui.add(props, 'start', 0, canvas.height)
-// gui.add(props, 'length', -.03, .03)
-// gui.add(props, 'amp', 0, 100)
-// gui.add(props, 'duration', -.01, .1)
-// gui.add(props, 'magnitude', 1, 2)
-
-// let direction = true
 let increment = props.duration
 
 
@@ -86,7 +63,7 @@ function animate() {
 
 
     //Top
-    c.fillStyle = "rgba(70, 130, 180,0.9)"
+    c.fillStyle = " rgb(52, 73, 94)"
 
     c.fillRect(0, 0, canvas.width, canvas.height)
 
@@ -108,3 +85,42 @@ function animate() {
     increment -= props.duration
 }
 animate()
+
+// BOTTOM
+
+// const canvas2 = document.getElementById('canvas-2')
+// const c2 = canvas2.getContext('2d')
+
+// canvas2.width = window.innerWidth - getScrollbarWidth()
+// canvas2.height = h
+
+
+// function animate2() {
+
+
+//     requestAnimationFrame(animate2)
+
+
+//     //Top
+//     c2.fillStyle = " rgb(52, 73, 94)"
+
+//     c2.fillRect(0, 0, canvas.width, canvas.height)
+
+//     // Bottom
+//     c2.beginPath()
+
+//     c2.moveTo(0, 0)
+
+
+//     for (let i = 0; i <= canvas.width; i++) {
+//         c2.lineTo(i, props.start + 40 * Math.sin(i * 0.01 * Math.sin(increment)) + Math.sin(i ** (props.magnitude) * (props.length + 5 * Math.sin(increment) / 10000)) * props.amp ** ((i + .1 * canvas.width) / canvas.width * 1.1))
+//     }
+
+//     c2.lineTo(canvas.width, canvas.height)
+//     c2.lineTo(0, canvas.height)
+//     c2.fillStyle = "ghostwhite"
+//     c2.fill()
+
+//     increment -= props.duration
+// }
+// animate2()

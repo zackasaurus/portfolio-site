@@ -9,8 +9,11 @@ canvas {
 
 header {
     position: fixed;
-    background: rgba(255, 255, 255, 0.5);
-    background: rgba(0, 0, 0, 0.4); // left: 5%;
+    z-index: 1000;
+    // background: rgba(255, 255, 255, 0.5);
+    background: rgba($color-primary-1, 0.9);
+    // opacity: 0.5;
+    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     width: 100%;
     // margin: 0 auto;
     height: 5rem;
@@ -33,6 +36,7 @@ header {
 
     h1 {
         // line-height: 1rem;
+        color: white;
     }
 }
 
@@ -43,6 +47,7 @@ nav {
     // border: 2px solid yellowgreen;
     width: 50%;
     // background: silver;
+
 
     ul {
         margin: 0;
@@ -67,7 +72,7 @@ nav {
     }
 
     a {
-        font-size: 1.3rem;
+        font-size: 1rem;
         letter-spacing: 2px;
         color: white;
         text-decoration: none;

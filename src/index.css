@@ -1,11 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
 canvas {
   display: block;
   overflow: hidden; }
 
 header {
   position: fixed;
-  background: rgba(255, 255, 255, 0.5);
-  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  background: rgba(52, 73, 94, 0.9);
   width: 100%;
   height: 5rem;
   display: flex;
@@ -18,6 +35,8 @@ header {
   line-height: 0rem;
   display: flex;
   align-items: center; }
+  #logo h1 {
+    color: white; }
 
 nav {
   display: flex;
@@ -31,21 +50,171 @@ nav {
   nav li {
     list-style: none; }
   nav a {
-    font-size: 1.3rem;
+    font-size: 1rem;
     letter-spacing: 2px;
     color: white;
     text-decoration: none; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+#projects {
+  margin: 0rem 0;
+  min-height: 100vh;
+  background: ghostwhite;
+  padding-bottom: 6rem; }
+  #projects .container {
+    padding: 0 15%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15vw;
+    grid-row-gap: 15vw; }
+  #projects h1 {
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #34495e;
+    margin-bottom: 4rem; }
+  #projects .item {
+    background: #34495e;
+    height: 22.5vw;
+    overflow: hidden;
+    position: relative; }
+    #projects .item h3 {
+      color: #34495e;
+      background: ghostwhite;
+      padding: 0 0 1rem 0; }
+    #projects .item img {
+      opacity: 0.8;
+      width: 100%;
+      transition: opacity .3s ease; }
+      #projects .item img:hover {
+        opacity: 1; }
+    #projects .item .btn-group:hover ~ img {
+      opacity: 1; }
+    #projects .item .btn-group {
+      bottom: 0%;
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+      display: flex; }
+      #projects .item .btn-group .btn, #projects .item .btn-group .btn-view, #projects .item .btn-group .btn-github {
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        width: 50%; }
+        #projects .item .btn-group .btn:hover span, #projects .item .btn-group .btn-view:hover span, #projects .item .btn-group .btn-github:hover span,
+        #projects .item .btn-group .btn:hover svg,
+        #projects .item .btn-group .btn-view:hover svg,
+        #projects .item .btn-group .btn-github:hover svg {
+          transform: translateX(5px); }
+      #projects .item .btn-group .btn-view {
+        background-color: rgba(52, 73, 94, 0.8); }
+        #projects .item .btn-group .btn-view::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          bottom: 0;
+          width: 0%;
+          left: 0;
+          color: black;
+          background: rgba(0, 0, 0, 0.3);
+          opacity: 1;
+          transition: all .2s ease-out; }
+        #projects .item .btn-group .btn-view:hover::before {
+          content: "";
+          width: 5px;
+          height: 100%; }
+        #projects .item .btn-group .btn-view:hover {
+          background-color: #34495e; }
+      #projects .item .btn-group .btn-github {
+        background-color: rgba(26, 188, 156, 0.8); }
+        #projects .item .btn-group .btn-github::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          bottom: 0;
+          width: 0;
+          left: 50%;
+          color: black;
+          background: rgba(0, 0, 0, 0.3);
+          opacity: 1;
+          transition: all .2s ease-out; }
+        #projects .item .btn-group .btn-github:hover::before {
+          content: "";
+          width: 5px; }
+        #projects .item .btn-group .btn-github:hover {
+          background-color: #1abc9c; }
+      #projects .item .btn-group a {
+        text-decoration: none;
+        line-height: 0;
+        color: ghostwhite;
+        fill: ghostwhite; }
+        #projects .item .btn-group a svg {
+          transition: all .2s ease; }
+        #projects .item .btn-group a span {
+          transition: all .2s ease;
+          font-size: 1rem;
+          padding-left: 0.75rem; }
+    #projects .item .item:hover img {
+      opacity: 1; }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+#contact {
+  bottom: 0;
+  height: 100%;
+  background: #34495e; }
+  #contact h1 {
+    color: ghostwhite;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 500;
+    padding-top: 6rem;
+    padding-bottom: 4rem; }
+  #contact .container {
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; }
+  #contact .input-group {
+    width: 100%; }
+  #contact label {
+    display: inline-block;
+    color: ghostwhite;
+    font-weight: 100; }
+  #contact input {
+    display: block;
+    width: 100%;
+    background: ghostwhite;
+    border: none;
+    outline: none;
+    margin: 1rem 0;
+    padding: .6rem 1.5rem;
+    transition: all .1s ease-out;
+    font-size: .8rem; }
+    #contact input:focus {
+      outline: solid rgba(248, 248, 255, 0.5) 5px;
+      background: ghostwhite; }
+  #contact textarea {
+    margin: 1rem 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: .8rem;
+    transition: all 0.3s ease-out; }
+    #contact textarea:focus {
+      outline: solid rgba(248, 248, 255, 0.5) 5px;
+      background: ghostwhite; }
+  #contact .btn-submit {
+    background: #1abc9c;
+    color: ghostwhite;
+    border: none;
+    height: 3rem;
+    display: inline-block;
+    width: 100%;
+    margin: 1rem 0;
+    opacity: .8;
+    font-size: .8rem;
+    text-transform: uppercase;
+    transition: all .3s ease-out; }
+    #contact .btn-submit:hover {
+      opacity: 1;
+      cursor: pointer; }

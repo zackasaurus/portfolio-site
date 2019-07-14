@@ -1,0 +1,184 @@
+#projects {
+    margin: 0rem 0;
+
+    min-height: 100vh;
+    background: ghostwhite;
+    padding-bottom: 6rem;
+
+    .container {
+        // max-width: 400;
+        padding: 0 15%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // grid-template-rows: 1fr 1fr;
+
+        // grid-gap: 10%;
+        grid-column-gap: 15vw;
+        grid-row-gap: 15vw;
+
+
+    }
+
+    h1 {
+        // font-family: "Barriecito";
+
+        font-size: 2rem;
+        text-align: center;
+        letter-spacing: 3px;
+        color: $color-primary-1;
+        margin-bottom: 4rem;
+    }
+
+
+
+    .item {
+        background: $color-primary-1;
+        height: 22.5vw;
+        overflow: hidden;
+        position: relative;
+
+
+
+        h3 {
+            color: $color-primary-1;
+            background: $color-white-1;
+            padding: 0 0 1rem 0;
+        }
+
+        img {
+            opacity: 0.8;
+            width: 100%;
+            transition: opacity .3s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+
+        }
+
+
+
+        .btn-group:hover~img {
+            opacity: 1;
+        }
+
+        .btn-group {
+            bottom: 0%;
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            cursor: pointer;
+
+            display: flex;
+            // align-items: bottom;
+
+            .btn {
+                display: flex;
+                align-items: center;
+                padding: 1rem 2rem;
+                width: 50%;
+                // transition: all 1s ease-out;
+
+
+
+                &:hover {
+
+                    span,
+                    svg {
+                        transform: translateX(5px);
+                    }
+                }
+
+            }
+
+            .btn-view {
+                @extend .btn;
+                background-color: rgba($color-primary-1, 0.8);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    bottom: 0;
+                    width: 0%;
+                    left: 0;
+                    color: black;
+                    background: $color-grey-1;
+                    opacity: 1;
+                    transition: all .2s ease-out;
+                }
+
+                &:hover::before {
+                    content: "";
+                    width: 5px;
+                    height: 100%;
+
+                }
+
+                &:hover {
+                    background-color: rgba($color-primary-1, 1);
+                }
+            }
+
+            .btn-github {
+                @extend .btn;
+                background-color: rgba($color-secondary-1, 0.8);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    bottom: 0;
+                    width: 0;
+                    left: 50%;
+                    color: black;
+                    background: $color-grey-1;
+
+                    opacity: 1;
+                    transition: all .2s ease-out;
+                }
+
+                &:hover::before {
+                    content: "";
+                    width: 5px;
+
+                }
+
+                &:hover {
+                    background-color: rgba($color-secondary-1, 1);
+
+
+                }
+            }
+
+            a {
+                // display: inline-block;
+                text-decoration: none;
+                line-height: 0;
+                color: $color-white-1;
+                fill: $color-white-1;
+
+                svg {
+                    transition: all .2s ease;
+                }
+
+                span {
+                    transition: all .2s ease;
+                    font-size: 1rem;
+                    padding-left: 0.75rem;
+                    // background: green;
+                }
+
+
+
+            }
+        }
+
+        .item:hover {
+            img {
+                opacity: 1;
+            }
+        }
+    }
+}
