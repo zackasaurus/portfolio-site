@@ -1,0 +1,12 @@
+#footer {
+    height: 5rem;
+    background: $color-asphalt-dark-4;
+    display: flex;
+    justify-content: center;
+    align-items: center; // background: black;
+
+    p {
+        color: $color-white-1;
+        letter-spacing: 2px;
+    }
+}

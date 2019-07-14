@@ -15,23 +15,48 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <!-- <div id="root"></div> -->
+  <!-- HEADER -->
   <header>
-    <div id='logo'>
-      <h1>Logo</h1>
+    <div class="container">
+      <div id='logo'>
+        <h1>Logo</h1>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#canvas" class="scroll active">About</a></li>
+          <li><a href="#projects" class="scroll">Projects</a></li>
+          <li><a href="#contact" class="scroll">Contact</a></li>
+        </ul>
+      </nav>
     </div>
 
-    <nav>
-      <ul>
-        <li><a href="#canvas">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="/">Contact</a></li>
-      </ul>
-    </nav>
   </header>
-
+  <!-- CANVAS -->
   <canvas id="canvas"></canvas>
 
-  <!-- Projects -->
+  <!-- ABOUT -->
+  <div id="about">
+    <div class="title">
+      <div class="name">
+        <h1 class="name__first">Zachary</h1>
+        <h1 class="name__last">Bogard</h1>
+      </div>
+
+      <h2>Software Developer | Designer</h2>
+      <div class="blurb">
+        <p>
+
+          I am a software developer & designer from San Diego, California. If you are in need of a new web page or
+          application, you can
+          get in touch with me here.</p>
+      </div>
+      <button>Get In Touch</button>
+
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
   <div id="projects">
     <h1>Projects</h1>
 
@@ -45,7 +70,7 @@
         </div>
         <div class="btn-group">
           <!-- PROJECT -->
-          <a href="#" class="btn-view">
+          <a href="https://mortgage-calculator.netlify.com/" target="_blank" class="btn-view">
             <svg id="icon-eye" height="24px" width="24px" viewBox="0 0 20 20">
               <title>eye</title>
               <path
@@ -185,7 +210,9 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>Footer</footer>
+  <footer id='footer'>
+    <p>Footer Content</p>
+  </footer>
 
 </body>
 

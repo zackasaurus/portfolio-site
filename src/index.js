@@ -1,7 +1,16 @@
 import './index.css';
 import * as dat from 'dat-gui'
+import SmoothScroll from './js/SmoothScroll'
+import $ from "jquery"
 
 // const gui = new dat.GUI()
+
+
+// Smooth Scroll
+SmoothScroll()
+
+
+
 
 
 const canvas = document.querySelector('canvas')
@@ -30,7 +39,7 @@ function getScrollbarWidth() {
 
 }
 
-let h = 600
+let h = 800
 
 canvas.width = window.innerWidth - getScrollbarWidth()
 canvas.height = h
@@ -46,7 +55,7 @@ window.addEventListener('resize', function () {
 })
 
 const props = {
-    start: canvas.height * 0.8,
+    start: canvas.height * .9,
     length: 0.0003,
     amp: 0,
     duration: 0.003,
@@ -63,7 +72,7 @@ function animate() {
 
 
     //Top
-    c.fillStyle = " rgb(52, 73, 94)"
+    c.fillStyle = " #34495E"
 
     c.fillRect(0, 0, canvas.width, canvas.height)
 
