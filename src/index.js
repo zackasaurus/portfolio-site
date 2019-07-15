@@ -1,7 +1,7 @@
 import './index.css';
-import * as dat from 'dat-gui'
+// import * as dat from 'dat-gui'
 import SmoothScroll from './js/SmoothScroll'
-import $ from "jquery"
+// import $ from "jquery"
 
 // const gui = new dat.GUI()
 

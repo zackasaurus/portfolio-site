@@ -1,23 +1,19 @@
 #projects {
     margin: 0rem auto;
 
-    min-height: 100vh;
+    // min-height: 100vh;
     background: ghostwhite;
     padding-bottom: 6rem;
 
-    // border: 1px solid black;
     max-width: 1440px;
 
     .container {
 
-        // max-width: 400;
         padding: 0 15%;
         height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        // grid-template-rows: 1fr 1fr;
 
-        // grid-gap: 10%;
         grid-column-gap: 15vw;
         grid-row-gap: 15vw;
 
@@ -25,13 +21,11 @@
     }
 
     h1 {
-        // font-family: "Barriecito";
 
         font-size: 2rem;
         text-align: center;
         letter-spacing: 3px;
         color: $color-primary-1;
-        // margin-top: 6rem;
         padding-top: 8rem;
         padding-bottom: 4rem;
     }
@@ -40,6 +34,7 @@
         color: $color-primary-1;
         background: $color-white-1;
         padding: 0 0 1rem 0;
+        font-weight: 500;
     }
 
     .item__image {
@@ -66,8 +61,9 @@
             // overflow: hidden;
 
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1.02);
                 opacity: 1;
+                cursor: pointer;
             }
 
         }
@@ -197,4 +193,66 @@
             }
         }
     }
+}
+
+// Regular Screens
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    #projects {
+        .container {
+            padding: 0 10%;
+            display: grid;
+            grid-column-gap: 10vw;
+            grid-row-gap: 10vw;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+        }
+    }
+
+}
+
+// Small Screens
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    #projects {
+        .container {
+            // background: green;
+            padding: 0 7.5%;
+            display: grid;
+            grid-column-gap: 7.5vw;
+            grid-row-gap: 7.5vw;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+    }
+
+}
+
+// Mobile & Tablets
+@media (min-width: 0px) and (max-width: 768px) {
+
+    #projects {
+        .container {
+            // background: green;
+            padding: 0 10%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0vw;
+            grid-row-gap: 20vw;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        .item {
+            height: 50vw;
+            max-height: none;
+        }
+    }
+
 }

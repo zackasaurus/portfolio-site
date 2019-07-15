@@ -13,7 +13,7 @@
         text-align: center;
         letter-spacing: 3px;
         // color: $color-primary-1;
-        font-weight: 500;
+        font-weight: 700;
         // margin: 8rem 0 8rem 0;
         padding-top: 6rem;
         padding-bottom: 4rem;
@@ -36,7 +36,7 @@
         display: inline-block;
         // height: 2rem;
         color: $color-white-1;
-        font-weight: 100;
+        font-weight: 300;
         // letter-spacing: 2px;
     }
 
@@ -57,22 +57,24 @@
 
         &:focus {
             // border: 2px solid black;
-            outline: solid rgba($color-white-1, 0.5) 5px;
+            outline: solid rgba($color-secondary-1, .8) 3px;
             background: $color-white-1;
 
         }
     }
 
     textarea {
+        display: block;
         margin: 1rem 0;
         width: 100%;
         padding: 1rem 1.5rem;
         font-size: .8rem;
-        transition: all 0.3s ease-out;
+        transition: all .1s ease-out;
+        background: $color-white-1;
 
         // outline: none;
         &:focus {
-            outline: solid rgba($color-white-1, 0.5) 5px;
+            outline: solid rgba($color-secondary-1, .8) 3px;
             background: $color-white-1;
         }
     }
@@ -81,13 +83,13 @@
         background: $color-secondary-1;
         color: $color-white-1;
         border: none;
-        height: 3rem;
+        height: 3.5rem;
         display: inline-block;
         width: 100%;
         margin: 1rem 0;
         opacity: .8;
         // padding: .5rem 1rem;
-        font-size: .8rem;
+        font-size: .9rem;
         text-transform: uppercase;
         transition: all .3s ease-out;
 

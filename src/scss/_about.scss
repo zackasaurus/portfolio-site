@@ -1,37 +1,29 @@
 #about {
     position: absolute;
-    // top: -10rem;
     top: 12rem;
     left: 15%;
     height: 20rem;
     width: 70%;
-    // margin: 0 auto;
-    // background: salmon;
     z-index: 10;
-    // display: flex;
-    // justify-content: flex-start;
-    // align-items: flex-start;
 
     .title {
         text-align: center;
+        // background: orange;
     }
 
     .name {
-
-        // background: teal;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     h1 {
-        // background: yellow;
         line-height: 2.1rem;
         color: $color-white-1;
         font-weight: 100;
         font-size: 3rem;
         letter-spacing: .3vw;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
         text-transform: uppercase;
     }
 
@@ -46,14 +38,15 @@
         font-size: 1rem;
         letter-spacing: .1vw;
         color: $color-white-1;
-        font-weight: 100;
+        font-weight: 300;
 
     }
 
     .blurb {
-        width: 80%;
+        width: 60%;
         margin: 4rem auto;
         margin-bottom: 4rem;
+        color: $color-white-1;
         // margin: 2rem;
     }
 
@@ -63,6 +56,7 @@
     }
 
     p {
+        font-weight: 300;
         color: $color-white-1;
         line-height: 2rem;
     }
@@ -130,5 +124,46 @@
     button {
         height: 3rem;
         width: 20%;
+    }
+}
+
+// Mobile & Tables
+@media (min-width: 0px) and (max-width: 768px) {
+    #about {
+        top: 9rem;
+
+        .name {
+            // height: 4rem;
+            // background: green;
+            flex-direction: column;
+            justify-content: center;
+            // line-height: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            line-height: .5rem;
+        }
+
+        .name__last {
+            margin: 0;
+            // margin-bottom: 2rem;
+        }
+
+
+
+        .blurb {
+            width: 100%;
+            margin: 3rem auto;
+        }
+
+        h1 {
+            // font-size: 2rem;
+        }
+
+        .btn__nav__contact {
+            width: 50%;
+        }
+
     }
 }

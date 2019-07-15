@@ -15,7 +15,7 @@ export default function SmoothScroll() {
         // Active Link Switching
         $(window).scroll(function () {
             let scrollbarLocation = $(this).scrollTop()
-            console.log(scrollbarLocation)
+            // console.log(scrollbarLocation)
 
             scrollLink.each(function () {
                 let sectionOffset = $(this.hash).offset().top - 20

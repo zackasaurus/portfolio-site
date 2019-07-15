@@ -1,36 +1,25 @@
 canvas {
-    // overflow-x: hidden;
     display: block;
     overflow: hidden;
-    // width: 95%;
-    // margin: 0;
-
 }
 
 header {
     position: fixed;
     z-index: 1000;
-    // background: rgba(255, 255, 255, 0.5);
+
     background: rgba($color-asphalt-dark-4, .95);
-    // opacity: 0.5;
-    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+
     width: 100%;
-    // margin: 0 auto;
     height: 5rem;
 
-    // align-items: center;
     .container {
         margin: 0 auto;
         height: 100%;
-        // background: slategray;
         width: 90%;
         display: flex;
         justify-content: space-between;
     }
-
 }
-
-
 
 #logo {
     // align-self: center;
@@ -146,4 +135,10 @@ nav {
     }
 
 
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    nav {
+        display: none;
+    }
 }
