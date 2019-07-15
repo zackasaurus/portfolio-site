@@ -19,7 +19,8 @@
   <header>
     <div class="container">
       <div id='logo'>
-        <h1>Logo</h1>
+        <!-- <h1>Logo</h1> -->
+        <img src="%PUBLIC_URL%/svg/Logo3-01.svg" height="40px" alt="Logo">
       </div>
 
       <nav>
@@ -35,6 +36,22 @@
   <!-- CANVAS -->
   <canvas id="canvas"></canvas>
 
+  <!-- LINKS -->
+  <div id="links">
+    <a href="https://www.linkedin.com/in/zachbogard/" target="_blank">
+      <img src="%PUBLIC_URL%/svg/linkedin-01.svg" height="32px" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/zackasaurus" target="_blank">
+      <img src="%PUBLIC_URL%/svg/github-01.svg" height="32px" alt="Github">
+    </a>
+    <a href="https://www.behance.net/zacharybogard" target="_blank">
+      <img src="%PUBLIC_URL%/svg/behance-01.svg" height="32px" alt="Behance">
+    </a>
+    <a href="https://codepen.io/zackasaurus/" target="_blank">
+      <img src="%PUBLIC_URL%/svg/codepen-01.svg" height="32px" alt="Codepen">
+    </a>
+  </div>
+
   <!-- ABOUT -->
   <div id="about">
     <div class="title">
@@ -49,12 +66,22 @@
 
           I am a software developer & designer from San Diego, California. If you are in need of a new web page or
           application, you can
-          get in touch with me here.</p>
+          get in touch with me <span><a href="#contact" class="scroll">here.</a></span></p>
       </div>
-      <button>Get In Touch</button>
+      <a class="btn__nav__contact scroll" href="#contact">
+        <span>Get In Touch</span>
+        <!-- <svg></svg> -->
+        <img src="%PUBLIC_URL%/svg/baseline-keyboard_arrow_right.svg" height="28px" alt="">
+
+
+
+      </a>
+      <!-- <button href="#contact">Get In Touch</button> -->
 
     </div>
   </div>
+
+
 
   <!-- PROJECTS -->
   <div id="projects">
@@ -66,7 +93,8 @@
       <div class="item">
         <h3>Mortgage Calculator</h3>
         <div class="item__image">
-          <img src="%PUBLIC_URL%/img/placeholder-image.jpg" alt="">
+
+          <img src="%PUBLIC_URL%/img/mortgage-calculator.png" alt="">
         </div>
         <div class="btn-group">
           <!-- PROJECT -->
@@ -97,9 +125,9 @@
 
       <!-- ITEM 2 -->
       <div class="item">
-        <h3>Mortgage Calculator</h3>
+        <h3>HTML Canvas Game</h3>
         <div class="item__image">
-          <img src="%PUBLIC_URL%/img/placeholder-image.jpg" alt="">
+          <img src="%PUBLIC_URL%/img/platform-game.png" alt="">
         </div>
         <div class="btn-group">
 
@@ -126,9 +154,9 @@
 
       <!-- ITEM 3 -->
       <div class="item">
-        <h3>Mortgage Calculator</h3>
+        <h3>EZ Baccarat Simulator</h3>
         <div class="item__image">
-          <img src="%PUBLIC_URL%/img/placeholder-image.jpg" alt="">
+          <img src="%PUBLIC_URL%/img/ez-baccarat-sim.png" alt="">
         </div>
         <div class="btn-group">
 
@@ -154,9 +182,9 @@
       </div>
       <!-- ITEM 4 -->
       <div class="item">
-        <h3>Mortgage Calculator</h3>
+        <h3>React / Redux / Firebase Tutorial</h3>
         <div class="item__image">
-          <img src="%PUBLIC_URL%/img/placeholder-image.jpg" alt="">
+          <img src="%PUBLIC_URL%/img/burger-builder.png" alt="">
         </div>
         <div class="btn-group">
 
@@ -192,19 +220,24 @@
 
     <h1>Contact</h1>
     <div class="container">
-      <div class="input-group">
-        <label for="">Name:</label>
-        <input type="text">
-      </div>
+      <form action="https://formspree.io/zachbogard@gmail.com" method="POST" class="contact-form">
+        <div class="input-group">
+          <label for="">Name:</label>
+          <input type="text" name="name" required>
+        </div>
 
-      <label for="">Email:</label>
-      <input type="text">
-      <label for="">Subject:</label>
-      <input type="text">
-      <label for="">Message:</label>
-      <textarea name="" id="" rows="10"></textarea>
+        <label for="email">Email:</label>
+        <input type="email" name="_replyto" required>
 
-      <button class="btn-submit">Submit</button>
+        <label for="">Subject:</label>
+        <input type="text" name="name" required>
+
+        <label for="">Message:</label>
+        <textarea name="name" id="" rows="10"></textarea>
+
+        <button class="btn-submit" type="submit" value="Send">Submit</button>
+      </form>
+
     </div>
 
   </div>

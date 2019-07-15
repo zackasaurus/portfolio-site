@@ -1,7 +1,7 @@
 #about {
     position: absolute;
     // top: -10rem;
-    top: 10rem;
+    top: 12rem;
     left: 15%;
     height: 20rem;
     width: 70%;
@@ -18,18 +18,20 @@
 
     .name {
 
+        // background: teal;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     h1 {
-
+        // background: yellow;
+        line-height: 2.1rem;
         color: $color-white-1;
         font-weight: 100;
         font-size: 3rem;
         letter-spacing: .3vw;
-        margin: 2rem 0rem;
+        margin-bottom: 3rem;
         text-transform: uppercase;
     }
 
@@ -50,8 +52,14 @@
 
     .blurb {
         width: 80%;
-        margin: 7.5rem auto;
+        margin: 4rem auto;
+        margin-bottom: 4rem;
         // margin: 2rem;
+    }
+
+    a {
+        color: $color-white-1;
+        text-decoration-line: underline
     }
 
     p {
@@ -59,36 +67,68 @@
         line-height: 2rem;
     }
 
-    .icons__media {
-        margin: 4rem auto;
-        width: 25%;
+    .btn__nav__contact {
+        // border: $color-white-1 1px solid;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        // text-transform: uppercase;
+        background: rgba(250, 114, 114, 0.8);
+        // font-size: 1.5rem;
 
-        // align-items:x
-        a {
-            line-height: 0;
+        // background: rgba(salmon, 0.5);
+        height: 3rem;
+        width: 30%;
+        margin: 0 auto;
+        transition: all .2s ease-out;
+        // padding-left: 1rem;
+
+        &:hover {
+            background: rgba(250, 114, 114, 1);
         }
 
-        svg {
-            // width: 4vw;
-            // height: 4vw;
-            fill: $color-white-1;
-            opacity: 0.7;
-            transition: all .3s ease;
-            cursor: pointer;
 
-            &:hover {
-                opacity: 1;
-                // transform: translateY(-.5rem);
-                transform: scale(1.1);
-                fill: $color-white-1;
+
+        span {
+            // display: block;
+            display: flex;
+            align-items: center;
+            // justify-content: flex-end;
+            // justify-content: center;
+            height: 100%;
+            // width: 100%;
+            font-weight: 700;
+            // background: gray;
+            // margin-right: 10px;
+        }
+
+        img {
+            justify-self: flex-start;
+            display: inline-block;
+            // background: slategray;
+            // width: 50%;
+
+            animation-duration: 1.2s;
+            animation-name: animateArrow;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        @keyframes animateArrow {
+            from {
+                transform: translateX(0) translateY(0);
+            }
+
+            to {
+                transform: translateX(10px);
             }
         }
+    }
 
-        ion-icon {
-            font-size: 32px;
-            color: $color-white-1;
-        }
+    button {
+        height: 3rem;
+        width: 20%;
     }
 }

@@ -7,7 +7,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  background: ghostwhite; }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
@@ -78,7 +79,7 @@ nav {
 
 #about {
   position: absolute;
-  top: 10rem;
+  top: 12rem;
   left: 15%;
   height: 20rem;
   width: 70%;
@@ -90,11 +91,12 @@ nav {
     justify-content: center;
     align-items: center; }
   #about h1 {
+    line-height: 2.1rem;
     color: ghostwhite;
     font-weight: 100;
     font-size: 3rem;
     letter-spacing: .3vw;
-    margin: 2rem 0rem;
+    margin-bottom: 3rem;
     text-transform: uppercase; }
   #about .name__last {
     margin-left: 1.5rem;
@@ -108,35 +110,70 @@ nav {
     font-weight: 100; }
   #about .blurb {
     width: 80%;
-    margin: 7.5rem auto; }
+    margin: 4rem auto;
+    margin-bottom: 4rem; }
+  #about a {
+    color: ghostwhite;
+    text-decoration-line: underline; }
   #about p {
     color: ghostwhite;
     line-height: 2rem; }
-  #about .icons__media {
-    margin: 4rem auto;
-    width: 25%;
+  #about .btn__nav__contact {
     display: flex;
-    justify-content: space-around; }
-    #about .icons__media a {
-      line-height: 0; }
-    #about .icons__media svg {
-      fill: ghostwhite;
-      opacity: 0.7;
-      transition: all .3s ease;
-      cursor: pointer; }
-      #about .icons__media svg:hover {
-        opacity: 1;
-        transform: scale(1.1);
-        fill: ghostwhite; }
-    #about .icons__media ion-icon {
-      font-size: 32px;
-      color: ghostwhite; }
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: rgba(250, 114, 114, 0.8);
+    height: 3rem;
+    width: 30%;
+    margin: 0 auto;
+    transition: all .2s ease-out; }
+    #about .btn__nav__contact:hover {
+      background: #fa7272; }
+    #about .btn__nav__contact span {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      font-weight: 700; }
+    #about .btn__nav__contact img {
+      justify-self: flex-start;
+      display: inline-block;
+      animation-duration: 1.2s;
+      animation-name: animateArrow;
+      animation-iteration-count: infinite;
+      animation-direction: alternate; }
+
+@keyframes animateArrow {
+  from {
+    transform: translateX(0) translateY(0); }
+  to {
+    transform: translateX(10px); } }
+  #about button {
+    height: 3rem;
+    width: 20%; }
+
+#links {
+  position: absolute;
+  top: 12rem;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 17.5rem; }
+  #links a {
+    color: white; }
+  #links img {
+    opacity: 0.5;
+    transition: opacity .2s ease-out; }
+  #links img:hover {
+    opacity: 1; }
 
 #projects {
-  margin: 0rem 0;
+  margin: 0rem auto;
   min-height: 100vh;
   background: ghostwhite;
-  padding-bottom: 6rem; }
+  padding-bottom: 6rem;
+  max-width: 1440px; }
   #projects .container {
     padding: 0 15%;
     height: 100%;
@@ -151,20 +188,24 @@ nav {
     color: #34495e;
     padding-top: 8rem;
     padding-bottom: 4rem; }
+  #projects h3 {
+    color: #34495e;
+    background: ghostwhite;
+    padding: 0 0 1rem 0; }
+  #projects .item__image {
+    overflow: hidden; }
   #projects .item {
     background: #34495e;
     height: 22.5vw;
+    max-height: 250px;
     overflow: hidden;
     position: relative; }
-    #projects .item h3 {
-      color: #34495e;
-      background: ghostwhite;
-      padding: 0 0 1rem 0; }
     #projects .item img {
       opacity: 0.8;
       width: 100%;
-      transition: opacity .3s ease; }
+      transition: all .3s ease; }
       #projects .item img:hover {
+        transform: scale(1.1);
         opacity: 1; }
     #projects .item .btn-group:hover ~ img {
       opacity: 1; }
@@ -205,7 +246,7 @@ nav {
         #projects .item .btn-group .btn-view:hover {
           background-color: #34495e; }
       #projects .item .btn-group .btn-github {
-        background-color: rgba(250, 128, 114, 0.8); }
+        background-color: rgba(250, 114, 114, 0.8); }
         #projects .item .btn-group .btn-github::before {
           content: "";
           position: absolute;
@@ -221,7 +262,7 @@ nav {
           content: "";
           width: 5px; }
         #projects .item .btn-group .btn-github:hover {
-          background-color: salmon; }
+          background-color: #fa7272; }
       #projects .item .btn-group a {
         text-decoration: none;
         line-height: 0;
@@ -283,7 +324,7 @@ nav {
       outline: solid rgba(248, 248, 255, 0.5) 5px;
       background: ghostwhite; }
   #contact .btn-submit {
-    background: salmon;
+    background: #fa7272;
     color: ghostwhite;
     border: none;
     height: 3rem;
