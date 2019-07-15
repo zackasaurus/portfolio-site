@@ -22,38 +22,24 @@ header {
 }
 
 #logo {
-    // align-self: center;
     height: 100%;
-    // margin: 2rem;
     padding: 0 0rem;
-    // margin-left: 4rem;
-    // background: lightgrey;
     line-height: 0rem;
     display: flex;
     align-items: center;
 
     h1 {
-        // line-height: 1rem;
         color: white;
     }
 }
 
 nav {
     display: flex;
-    // position: relative;
-    // height: 100%;
-    // border: 2px solid yellowgreen;
     width: 35%;
-    // background: silver;
-
 
     ul {
         margin: 0;
-        // padding: 0;
-        // height: 100%;
         width: 100%;
-        // background: green;
-        // border: 5px solid grey;
         display: flex;
         justify-content: space-between;
         align-items: center;
