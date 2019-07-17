@@ -21,15 +21,18 @@ canvas {
 header {
   position: fixed;
   z-index: 1000;
-  background: rgba(27, 38, 49, 0.95);
+  background: rgba(65, 105, 225, 0.95);
   width: 100%;
-  height: 5rem; }
-  header .container {
-    margin: 0 auto;
-    height: 100%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between; }
+  height: 5rem;
+  padding: 0 7.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header::after {
+    content: "";
+    position: fixed;
+    height: 3px;
+    width: 100%; }
 
 #logo {
   height: 100%;
@@ -40,43 +43,69 @@ header {
   #logo h1 {
     color: white; }
 
+a {
+  transition: .3s ease-out; }
+
 nav {
   display: flex;
-  width: 35%; }
-  nav ul {
-    margin: 0;
+  height: 100%;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 1px; }
+  nav .scroll {
+    position: relative;
+    z-index: 10;
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
-  nav li {
-    transition: all .2s ease-out;
-    list-style: none; }
-  nav li:hover {
-    transform: translateY(-2px); }
-  nav a::before {
+    align-items: center;
+    justify-content: center;
+    color: ghostwhite;
+    text-decoration: none; }
+    nav .scroll::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 5px;
+      transform: translateY(0px); }
+    nav .scroll::before {
+      z-index: 0;
+      height: 100%;
+      content: ""; }
+  nav .scroll:hover::before {
     content: "";
+    z-index: 0;
     position: absolute;
-    bottom: -.75rem;
-    width: 0%;
-    height: 0px;
-    background: ghostwhite;
-    transition: all .2s ease-out; }
-  nav a:hover::before {
-    width: 100%;
-    height: 2px; }
-  nav a {
-    padding: 1rem 0;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    color: white;
-    text-decoration: none;
-    opacity: 0.7;
-    transition: all .2s ease-out; }
-  nav a:hover {
-    transform: translateY(5px); }
+    bottom: 0;
+    animation-name: fire;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+
+@keyframes fire {
+  0% {
+    background-color: rgba(248, 248, 255, 0);
+    height: 100%;
+    width: 100%; }
+  100% {
+    background-color: rgba(248, 248, 255, 0.2);
+    height: 100%;
+    width: 100%; } }
   nav .active {
-    opacity: 1; }
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px); }
+    nav .active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 5px;
+      transform: translateY(5px);
+      background: ghostwhite; }
 
 @media (min-width: 0px) and (max-width: 768px) {
   nav {
@@ -159,7 +188,7 @@ nav {
     height: 3rem;
     width: 20%; }
 
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   #about {
     top: 9rem; }
     #about .name {
@@ -176,17 +205,35 @@ nav {
     #about .btn__nav__contact {
       width: 50%; } }
 
+@media (min-width: 0px) and (max-width: 480px) {
+  #about {
+    top: 9rem; }
+    #about .name {
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 4rem; }
+    #about h1 {
+      line-height: .5rem; }
+    #about .name__last {
+      margin: 0; }
+    #about .blurb {
+      width: 100%;
+      margin: 3rem auto; }
+    #about .btn__nav__contact {
+      width: 80%; } }
+
 #links {
   position: absolute;
   top: 12rem;
   right: 0%;
   width: 7.5%;
+  max-width: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   height: 20rem;
-  background: rgba(27, 38, 49, 0.95); }
+  background: rgba(65, 105, 225, 0.95); }
   #links a {
     color: white; }
   #links img {
@@ -195,13 +242,25 @@ nav {
   #links img:hover {
     opacity: 1; }
 
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   #links {
     height: 5rem;
-    top: 40rem;
+    top: 37.5rem;
     left: 25%;
     right: 0;
     width: 50%;
+    max-width: none;
+    background: none;
+    flex-direction: row; } }
+
+@media (min-width: 0px) and (max-width: 480px) {
+  #links {
+    height: 5rem;
+    top: 42.5rem;
+    left: 25%;
+    right: 0;
+    width: 50%;
+    max-width: none;
     background: none;
     flex-direction: row; } }
 
@@ -221,18 +280,18 @@ nav {
     font-size: 2rem;
     text-align: center;
     letter-spacing: 3px;
-    color: #34495e;
+    color: #1b2631;
     padding-top: 8rem;
     padding-bottom: 4rem; }
   #projects h3 {
-    color: #34495e;
+    color: #1b2631;
     background: ghostwhite;
     padding: 0 0 1rem 0;
     font-weight: 500; }
   #projects .item__image {
     overflow: hidden; }
   #projects .item {
-    background: #34495e;
+    background: #1b2631;
     height: 22.5vw;
     max-height: 250px;
     overflow: hidden;
@@ -265,7 +324,7 @@ nav {
         #projects .item .btn-group .btn-github:hover svg {
           transform: translateX(5px); }
       #projects .item .btn-group .btn-view {
-        background-color: rgba(52, 73, 94, 0.8); }
+        background-color: rgba(27, 38, 49, 0.8); }
         #projects .item .btn-group .btn-view::before {
           content: "";
           position: absolute;
@@ -282,7 +341,7 @@ nav {
           width: 5px;
           height: 100%; }
         #projects .item .btn-group .btn-view:hover {
-          background-color: #34495e; }
+          background-color: #1b2631; }
       #projects .item .btn-group .btn-github {
         background-color: rgba(250, 114, 114, 0.8); }
         #projects .item .btn-group .btn-github::before {
@@ -317,19 +376,25 @@ nav {
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   #projects .container {
-    padding: 0 10%;
+    padding: 0 12.5%;
     display: grid;
-    grid-column-gap: 10vw;
-    grid-row-gap: 10vw; }
+    grid-column-gap: 12.5vw;
+    grid-row-gap: 12.5vw; }
+  #projects .item {
+    height: 25vw;
+    max-height: none; }
   #projects h3 {
     font-size: 1.1rem; } }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  #projects .item {
+    height: 25vw;
+    max-height: none; }
   #projects .container {
-    padding: 0 7.5%;
+    padding: 0 10%;
     display: grid;
-    grid-column-gap: 7.5vw;
-    grid-row-gap: 7.5vw; }
+    grid-column-gap: 5vw;
+    grid-row-gap: 10vw; }
   #projects h3 {
     font-size: 1rem; } }
 
@@ -349,7 +414,7 @@ nav {
 #contact {
   bottom: 0;
   height: 100%;
-  background: #34495e;
+  background: #1b2631;
   padding-bottom: 6rem; }
   #contact h1 {
     color: ghostwhite;
@@ -390,7 +455,9 @@ nav {
     padding: 1rem 1.5rem;
     font-size: .8rem;
     transition: all .1s ease-out;
-    background: ghostwhite; }
+    background: ghostwhite;
+    border: none;
+    outline: none; }
     #contact textarea:focus {
       outline: solid rgba(250, 114, 114, 0.8) 3px;
       background: ghostwhite; }
@@ -409,6 +476,10 @@ nav {
     #contact .btn-submit:hover {
       opacity: 1;
       cursor: pointer; }
+
+@media (min-width: 0px) and (max-width: 768px) {
+  #contact .container {
+    width: 80%; } }
 
 #footer {
   height: 5rem;

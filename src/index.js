@@ -16,6 +16,7 @@ SmoothScroll()
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
+// Get Scrollbar Width
 function getScrollbarWidth() {
 
     // Creating invisible container
@@ -39,7 +40,13 @@ function getScrollbarWidth() {
 
 }
 
-let h = 800
+let h = 850
+// if (window.innerWidth < 780) {
+//     h = 900
+// }
+// else {
+//     h = 600
+// }
 
 canvas.width = window.innerWidth - getScrollbarWidth()
 canvas.height = h
@@ -48,6 +55,15 @@ let resizeCanvas = function () {
     canvas.width = window.innerWidth - getScrollbarWidth()
     canvas.height = h
     c.imageSmoothingEnabled = true;
+    // if (window.innerWidth < 780) {
+    //     h = 900
+    //     canvas.height = 900
+    //     // console.log(h)
+    // }
+    // else {
+    //     canvas.height = 850
+    // }
+    // animate()
 }
 
 window.addEventListener('resize', function () {
@@ -72,7 +88,7 @@ function animate() {
 
 
     //Top
-    c.fillStyle = " #34495E"
+    c.fillStyle = " #1B2631"
 
     c.fillRect(0, 0, canvas.width, canvas.height)
 

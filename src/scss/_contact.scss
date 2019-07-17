@@ -71,6 +71,8 @@
         font-size: .8rem;
         transition: all .1s ease-out;
         background: $color-white-1;
+        border: none;
+        outline: none;
 
         // outline: none;
         &:focus {
@@ -96,6 +98,15 @@
         &:hover {
             opacity: 1;
             cursor: pointer;
+        }
+    }
+}
+
+// Mobile
+@media (min-width: 0px) and (max-width: 768px) {
+    #contact {
+        .container {
+            width: 80%;
         }
     }
 }

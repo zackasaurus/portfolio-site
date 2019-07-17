@@ -17,7 +17,6 @@
         grid-column-gap: 15vw;
         grid-row-gap: 15vw;
 
-
     }
 
     h1 {
@@ -39,8 +38,7 @@
 
     .item__image {
         overflow: hidden;
-        // height: 22.5vw;
-        // width: 100%;
+
     }
 
     .item {
@@ -49,10 +47,6 @@
         max-height: 250px;
         overflow: hidden;
         position: relative;
-        // border: 1px solid black;
-
-
-
 
         img {
             opacity: 0.8;
@@ -67,9 +61,6 @@
             }
 
         }
-
-
-
 
         .btn-group:hover~img {
             opacity: 1;
@@ -198,12 +189,18 @@
 // Regular Screens
 @media (min-width: 1024px) and (max-width: 1439px) {
 
+
     #projects {
         .container {
-            padding: 0 10%;
+            padding: 0 12.5%;
             display: grid;
-            grid-column-gap: 10vw;
-            grid-row-gap: 10vw;
+            grid-column-gap: 12.5vw;
+            grid-row-gap: 12.5vw;
+        }
+
+        .item {
+            height: 25vw;
+            max-height: none;
         }
 
         h3 {
@@ -217,12 +214,17 @@
 @media (min-width: 768px) and (max-width: 1024px) {
 
     #projects {
+        .item {
+            height: 25vw;
+            max-height: none;
+        }
+
         .container {
             // background: green;
-            padding: 0 7.5%;
+            padding: 0 10%;
             display: grid;
-            grid-column-gap: 7.5vw;
-            grid-row-gap: 7.5vw;
+            grid-column-gap: 5vw;
+            grid-row-gap: 10vw;
         }
 
         h3 {
@@ -244,6 +246,7 @@
             grid-column-gap: 0vw;
             grid-row-gap: 20vw;
         }
+
 
         h3 {
             font-size: 1rem;

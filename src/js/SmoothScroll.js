@@ -18,11 +18,11 @@ export default function SmoothScroll() {
             // console.log(scrollbarLocation)
 
             scrollLink.each(function () {
-                let sectionOffset = $(this.hash).offset().top - 20
+                let sectionOffset = $(this.hash).offset().top - 100
 
                 if (sectionOffset <= scrollbarLocation) {
                     $(this).addClass('active');
-                    $(this).parent().siblings().children().removeClass('active')
+                    $(this).siblings().removeClass('active')
                 }
             })
         })
