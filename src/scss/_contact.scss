@@ -42,7 +42,7 @@
 
     input {
         display: block;
-
+        border-radius: none;
         // height: 2rem;
         width: 100%;
         background: $color-white-1;
@@ -64,6 +64,7 @@
 
     textarea {
         display: block;
+        border-radius: none;
         margin: 1rem 0;
         width: 100%;
         padding: 1rem 1.5rem;

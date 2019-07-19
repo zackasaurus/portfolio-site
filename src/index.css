@@ -558,6 +558,7 @@ nav {
     font-weight: 300; }
   #contact input {
     display: block;
+    border-radius: none;
     width: 100%;
     background: ghostwhite;
     border: none;
@@ -571,6 +572,7 @@ nav {
       background: ghostwhite; }
   #contact textarea {
     display: block;
+    border-radius: none;
     margin: 1rem 0;
     width: 100%;
     padding: 1rem 1.5rem;
