@@ -142,4 +142,50 @@ nav {
     nav {
         display: none;
     }
+
+    .menu__button {
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        position: relative;
+        width: 2rem;
+        cursor: pointer;
+    }
+
+    .line {
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        border-radius: 20px;
+        background: $color-white-1;
+        transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+    }
+
+    .top {
+        top: -10px;
+    }
+
+    .middle {
+        top: 0;
+    }
+
+    .bottom {
+        top: 10px;
+    }
+
+    .close>.top {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .close>.middle,
+    .close>.bottom {
+        transform: rotate(-45deg);
+        top: 0;
+    }
 }

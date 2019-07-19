@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon-01.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
 
@@ -16,12 +16,19 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <!-- <div id="root"></div> -->
   <!-- HEADER -->
   <header>
 
     <div id='logo'>
-      <img src="%PUBLIC_URL%/svg/Logo3-01.svg" height="40px" alt="Logo">
+      <img src="%PUBLIC_URL%/svg/Logo3-01.svg" height="48px" alt="Logo">
+    </div>
+
+    <div id="menu-btn" class="menu__button">
+      <div class="hamburger">
+        <span class="line top"></span>
+        <span class="line middle"></span>
+        <span class="line bottom"></span>
+      </div>
     </div>
 
     <nav>
@@ -30,6 +37,14 @@
       <a href="#contact" class="scroll">Contact</a>
     </nav>
   </header>
+
+  <!-- MENU SLIDE -->
+  <section class="menu__slide">
+    <a href="#canvas" class="scroll active">About</a>
+    <a href="#projects" class="scroll">Projects</a>
+    <a href="#contact" class="scroll">Contact</a>
+  </section>
+
   <!-- CANVAS -->
   <canvas id="canvas"></canvas>
 

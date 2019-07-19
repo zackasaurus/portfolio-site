@@ -114,7 +114,123 @@ nav {
 
 @media (min-width: 0px) and (max-width: 768px) {
   nav {
+    display: none; }
+  .menu__button {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; }
+  .hamburger {
+    position: relative;
+    width: 2rem;
+    cursor: pointer; }
+  .line {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    border-radius: 20px;
+    background: ghostwhite;
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s; }
+  .top {
+    top: -10px; }
+  .middle {
+    top: 0; }
+  .bottom {
+    top: 10px; }
+  .close > .top {
+    transform: rotate(45deg);
+    top: 0; }
+  .close > .middle,
+  .close > .bottom {
+    transform: rotate(-45deg);
+    top: 0; } }
+
+@media (min-width: 768px) {
+  .menu__slide {
     display: none; } }
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .menu__slide {
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    width: 100%;
+    height: calc(100vh);
+    background: royalblue;
+    transform: translateX(100vw);
+    padding: 5rem 30% 40vh 0;
+    transition: all 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden; }
+    .menu__slide a {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: ghostwhite;
+      text-decoration: none;
+      font-size: 1.5rem; }
+    .menu__slide .scroll {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: ghostwhite;
+      text-decoration: none; }
+      .menu__slide .scroll::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        transform: translateY(0px); }
+      .menu__slide .scroll::before {
+        z-index: 0;
+        height: 100%;
+        content: ""; }
+    .menu__slide .scroll:hover::before {
+      content: "";
+      z-index: 0;
+      position: absolute;
+      bottom: 0;
+      animation-name: fire;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      backface-visibility: hidden; }
+  @keyframes fire {
+    0% {
+      background-color: rgba(248, 248, 255, 0);
+      height: 100%;
+      width: 100%; }
+    100% {
+      background-color: rgba(248, 248, 255, 0.2);
+      height: 100%;
+      width: 100%; } }
+    .menu__slide .active {
+      background: rgba(0, 0, 0, 0.1);
+      transform: translateX(10px); }
+      .menu__slide .active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 10px;
+        transform: translateX(-10px);
+        background: ghostwhite; }
+  .open {
+    width: 100%;
+    transform: translateX(30%); } }
 
 #about {
   position: absolute;

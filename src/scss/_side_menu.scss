@@ -1,0 +1,126 @@
+@media (min-width: 768px) {
+    .menu__slide {
+        display: none;
+    }
+}
+
+// Mobile & Tablets
+@media (min-width: 0px) and (max-width: 768px) {
+
+    //empty
+    .menu__slide {
+        position: fixed;
+        z-index: 100;
+        right: 0;
+        width: 100%;
+        height: calc(100vh);
+        background: rgba($color-tertiary-1, 1);
+        transform: translateX(100vw);
+        padding: 5rem 30% 40vh 0;
+        transition: all 0.4s;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        justify-content: space-evenly;
+        overflow: hidden;
+
+        a {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-white-1;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .scroll {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: ghostwhite;
+            text-decoration: none;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 5px;
+                transform: translateY(0px);
+            }
+
+            &::before {
+                z-index: 0;
+                height: 100%;
+                content: "";
+            }
+        }
+
+        .scroll:hover {
+            &::before {
+                content: "";
+                z-index: 0;
+                position: absolute;
+                bottom: 0;
+                animation-name: fire;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+                backface-visibility: hidden;
+
+            }
+
+
+        }
+
+        @keyframes fire {
+            0% {
+
+                background-color: rgba(ghostwhite, 0);
+                height: 100%;
+                width: 100%;
+            }
+
+            100% {
+                background-color: rgba(ghostwhite, .2);
+                height: 100%;
+                width: 100%;
+
+            }
+        }
+
+        .active {
+            background: rgba(black, 0.1);
+            transform: translateX(10px);
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 10px;
+                transform: translateX(-10px);
+                background: ghostwhite;
+            }
+
+        }
+
+    }
+
+    .open {
+        width: 100%;
+        transform: translateX(30%);
+    }
+
+
+}
