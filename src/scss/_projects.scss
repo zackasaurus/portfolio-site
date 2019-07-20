@@ -1,21 +1,21 @@
 #projects {
     margin: 0rem auto;
-
+    // height: 100%;
     // min-height: 100vh;
     background: ghostwhite;
-    padding-bottom: 6rem;
+    padding-bottom: 15rem;
 
     max-width: 1440px;
 
     .container {
 
-        padding: 0 15%;
+        padding: 0 7.5%;
         height: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
 
-        grid-column-gap: 15vw;
-        grid-row-gap: 15vw;
+        grid-column-gap: 7.5%;
+        grid-row-gap: 7.5%;
 
     }
 
@@ -25,7 +25,7 @@
         text-align: center;
         letter-spacing: 3px;
         color: $color-primary-1;
-        padding-top: 8rem;
+        padding-top: 6rem;
         padding-bottom: 4rem;
     }
 
@@ -44,7 +44,7 @@
     .item {
         background: $color-primary-1;
         height: 22.5vw;
-        max-height: 250px;
+        max-height: 325px;
         overflow: hidden;
         position: relative;
 
@@ -80,7 +80,7 @@
                 display: flex;
                 align-items: center;
                 padding: 1rem 2rem;
-                width: 50%;
+                width: 100%;
                 // transition: all 1s ease-out;
 
 
@@ -89,7 +89,7 @@
 
                     span,
                     svg {
-                        transform: translateX(5px);
+                        transform: translateX(7px);
                     }
                 }
 
@@ -107,14 +107,14 @@
                     width: 0%;
                     left: 0;
                     color: black;
-                    background: $color-grey-1;
+                    background: rgba($color-tertiary-1, 1);
                     opacity: 1;
                     transition: all .2s ease-out;
                 }
 
                 &:hover::before {
                     content: "";
-                    width: 5px;
+                    width: 7px;
                     height: 100%;
 
                 }
@@ -136,7 +136,7 @@
                     width: 0;
                     left: 50%;
                     color: black;
-                    background: $color-grey-1;
+                    background: rgba($color-tertiary-1, 1);
 
                     opacity: 1;
                     transition: all .2s ease-out;
@@ -144,7 +144,7 @@
 
                 &:hover::before {
                     content: "";
-                    width: 5px;
+                    width: 7px;
 
                 }
 
@@ -167,6 +167,7 @@
                 }
 
                 span {
+                    display: block;
                     transition: all .2s ease;
                     font-size: 1rem;
                     padding-left: 0.75rem;
@@ -187,15 +188,18 @@
 }
 
 // Regular Screens
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 1200px) and (max-width: 1439px) {
 
 
     #projects {
+        padding-bottom: 6rem;
+
         .container {
-            padding: 0 12.5%;
+            padding: 0 5%;
             display: grid;
-            grid-column-gap: 12.5vw;
-            grid-row-gap: 12.5vw;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 5vw;
+            grid-row-gap: 5vw;
         }
 
         .item {
@@ -206,30 +210,45 @@
         h3 {
             font-size: 1.1rem;
         }
+
     }
 
 }
 
 // Small Screens
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1200px) {
 
     #projects {
+        padding-bottom: 6rem;
+
         .item {
-            height: 25vw;
+            height: 30vw;
             max-height: none;
+
+            span {
+                // color: blue;
+                font-size: .7rem;
+            }
+
+            svg {
+                width: 18px;
+            }
         }
 
         .container {
             // background: green;
             padding: 0 10%;
             display: grid;
-            grid-column-gap: 5vw;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 10vw;
             grid-row-gap: 10vw;
         }
 
         h3 {
             font-size: 1rem;
         }
+
+
     }
 
 }
@@ -238,7 +257,10 @@
 @media (min-width: 0px) and (max-width: 768px) {
 
     #projects {
+        padding-bottom: 6rem;
+
         .container {
+
             // background: green;
             padding: 0 10%;
             display: grid;

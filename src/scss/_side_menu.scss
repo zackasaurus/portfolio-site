@@ -1,3 +1,4 @@
+// Desktops +
 @media (min-width: 768px) {
     .menu__slide {
         display: none;
@@ -7,7 +8,7 @@
 // Mobile & Tablets
 @media (min-width: 0px) and (max-width: 768px) {
 
-    //empty
+
     .menu__slide {
         position: fixed;
         z-index: 100;
@@ -34,7 +35,7 @@
             align-items: center;
             color: $color-white-1;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         .scroll {

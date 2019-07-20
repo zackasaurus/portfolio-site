@@ -1,6 +1,10 @@
 canvas {
     display: block;
     overflow: hidden;
+    backface-visibility: hidden;
+    // -webkit-backface-visibility: hidden;
+    // -webkit-transform-style: preserve-3d;
+    // -webkit-font-smoothing: subpixel-antialiased;
 }
 
 header {
