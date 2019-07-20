@@ -512,14 +512,12 @@ nav {
     #projects h3 {
       font-size: 1.1rem; } }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 900px) and (max-width: 1200px) {
   #projects {
     padding-bottom: 6rem; }
     #projects .item {
       height: 30vw;
       max-height: none; }
-      #projects .item span {
-        font-size: .7rem; }
       #projects .item svg {
         width: 18px; }
     #projects .container {
@@ -531,6 +529,21 @@ nav {
     #projects h3 {
       font-size: 1rem; } }
 
+@media (min-width: 768px) and (max-width: 900px) {
+  #projects .item {
+    height: 35vw;
+    max-height: none; }
+    #projects .item span {
+      font-size: .9rem !important; }
+    #projects .item svg {
+      width: 18px; }
+  #projects .container {
+    padding: 0 7.5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 7.5vw;
+    grid-row-gap: 7.5vw; } }
+
 @media (min-width: 0px) and (max-width: 768px) {
   #projects {
     padding-bottom: 6rem; }
@@ -539,11 +552,11 @@ nav {
       display: grid;
       grid-template-columns: 1fr;
       grid-column-gap: 0vw;
-      grid-row-gap: 20vw; }
+      grid-row-gap: 10vw; }
     #projects h3 {
       font-size: 1rem; }
     #projects .item {
-      height: 50vw;
+      height: 70vw;
       max-height: none; } }
 
 #contact {
@@ -620,7 +633,7 @@ nav {
 
 #footer {
   height: 5rem;
-  background: #1b2631;
+  background: ghostwhite;
   display: flex;
   justify-content: center;
   align-items: center; }

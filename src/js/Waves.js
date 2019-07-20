@@ -55,7 +55,9 @@ export default function Waves() {
     let increment = props.duration
 
 
+
     function animate() {
+        let constant = canvas.width / 1000
         requestAnimationFrame(animate)
         //Top
         c.fillStyle = " #1B2631"
@@ -64,7 +66,7 @@ export default function Waves() {
         c.beginPath()
         c.moveTo(0, props.start)
         for (let i = 0; i <= canvas.width; i++) {
-            c.lineTo(i, props.start + 40 * Math.sin(i * 0.01 * Math.sin(increment)))
+            c.lineTo(i, props.start + 40 * Math.sin(i * 0.01 / constant * Math.sin(increment)))
         }
         c.lineTo(canvas.width, canvas.height)
         c.lineTo(0, canvas.height)
