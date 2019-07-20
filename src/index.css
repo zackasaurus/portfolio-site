@@ -557,7 +557,10 @@ nav {
       font-size: 1rem; }
     #projects .item {
       height: 70vw;
-      max-height: none; } }
+      max-height: none; }
+    #projects .btn, #projects .item .btn-group .btn-view, #projects .item .btn-group .btn-github {
+      padding-left: 1.5rem;
+      padding-right: 0rem; } }
 
 #contact {
   bottom: 0;
