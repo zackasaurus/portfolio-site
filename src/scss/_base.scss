@@ -20,6 +20,8 @@ $color-turquoise-light-2: rgb(118, 215, 196);
 $color-turquoise-light-1: rgb(72, 201, 176);
 $color-turquoise: rgb(26, 188, 156);
 
+
+
 // BLUE GREY
 $color-asphalt-light-5: rgb(235, 237, 239);
 $color-asphalt-light-4: rgb(214, 219, 223);
@@ -40,18 +42,22 @@ $color-silver: rgb(189, 195, 199);
 
 
 // PRIMARY
-
 $color-primary: #1B2631;
 $color-primary-1: $color-asphalt-dark-4;
 $color-primary-2: $color-asphalt-dark-1;
 
 // SECONDARY
 $color-secondary-1: rgba(250, 114, 114, 1);
+$color-secondary-2: $color-alizarin;
 
 // TERTIARY
 $color-tertiary-1: royalblue;
+$color-tertiary-1: slategrey;
+$color-tertiary-1: rgb(78, 91, 201);
+// $color-tertiary-1: #3f51b5;
+// $color-tertiary-1: #5c6bc0;
+
 // WHITES
 $color-white-1: ghostwhite;
 $color-white-2: $color-silver;
-
 $color-grey-1: rgba(0, 0, 0, 0.3);

@@ -1,12 +1,17 @@
 #footer {
     height: 5rem;
-    background: $color-white-1;
+    border-top: solid 1px rgba($color-white-1, .1);
+    // background: $color-tertiary-1;
+    // background: slategray;
+    background: $color-primary-1;
     display: flex;
     justify-content: center;
     align-items: center; // background: black;
 
     p {
         color: $color-white-1;
-        letter-spacing: 2px;
+        // letter-spacing: 2px;
+        font-size: .9rem;
+        // font-weight: 700;
     }
 }

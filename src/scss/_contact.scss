@@ -1,11 +1,25 @@
 #contact {
-
+    position: relative;
     bottom: 0;
     height: 100%;
 
     // margin-top: 6rem;
     background: $color-primary-1;
     padding-bottom: 6rem;
+    // z-index: ;
+
+    // background-image: url('%PUBLIC_URL%/svg/map-01.svg');
+    img {
+        position: absolute;
+        pointer-events: none;
+        // top: 0;
+        // left: 0;
+        height: 100%;
+        width: 100%;
+
+        opacity: 0.1;
+        z-index: 1;
+    }
 
     h1 {
         // font-family: "Barriecito";
@@ -20,6 +34,7 @@
     }
 
     .container {
+        z-index: 10;
         height: 100%;
         width: 50%;
         margin: 0 auto;
@@ -30,13 +45,15 @@
 
     .input-group {
         width: 100%;
+        // z-index: 10;
+
     }
 
     label {
         display: inline-block;
         // height: 2rem;
         color: $color-white-1;
-        font-weight: 300;
+        font-weight: 500;
         // letter-spacing: 2px;
     }
 
@@ -81,22 +98,24 @@
     }
 
     .btn-submit {
-        background: $color-secondary-1;
+        // background: $color-secondary-1;
+        background: linear-gradient(to bottom right, $color-secondary-1, $color-secondary-2);
         color: $color-white-1;
         border: none;
-        height: 3.5rem;
+        height: 4rem;
         display: inline-block;
         width: 100%;
         margin: 1rem 0;
         opacity: .8;
-        // padding: .5rem 1rem;
         font-size: .9rem;
         text-transform: uppercase;
         transition: all .3s ease-out;
+        z-index: 10;
 
         &:hover {
             opacity: 1;
             cursor: pointer;
+
         }
     }
 }
@@ -106,6 +125,10 @@
     #contact {
         .container {
             width: 80%;
+        }
+
+        img {
+            display: none;
         }
     }
 }

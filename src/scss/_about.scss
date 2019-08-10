@@ -20,7 +20,7 @@
     h1 {
         line-height: 2.1rem;
         color: $color-white-1;
-        font-weight: 300;
+        font-weight: 500;
         font-size: 3rem;
         letter-spacing: .3vw;
         margin-bottom: 4rem;
@@ -30,7 +30,7 @@
     .name__last {
         margin-left: 1.5rem;
         font-size: 3rem;
-        font-weight: 300;
+        font-weight: 500;
         color: $color-white-1;
     }
 
@@ -68,9 +68,10 @@
         align-items: center;
         text-decoration: none;
         // text-transform: uppercase;
-        background: rgba(250, 114, 114, 0.8);
+        // background: rgba(250, 114, 114, 0.8);
+        background: linear-gradient(to bottom right, $color-secondary-1, $color-secondary-2);
         // font-size: 1.5rem;
-
+        opacity: 0.8;
         // background: rgba(salmon, 0.5);
         height: 3rem;
         width: 30%;
@@ -79,7 +80,8 @@
         // padding-left: 1rem;
 
         &:hover {
-            background: rgba(250, 114, 114, 1);
+            background: linear-gradient(to bottom right, $color-secondary-1, $color-secondary-2);
+            opacity: 1;
         }
 
 
