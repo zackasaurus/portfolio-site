@@ -43,6 +43,8 @@ header {
   align-items: center; }
   #logo h1 {
     color: white; }
+  #logo img {
+    height: 40px; }
 
 a {
   transition: .3s ease-out; }
@@ -125,6 +127,8 @@ nav {
 @media (min-width: 0px) and (max-width: 768px) {
   nav {
     display: none; }
+  #logo img {
+    height: 32px; }
   .menu__button {
     height: 45px;
     display: flex;
@@ -297,6 +301,7 @@ nav {
     opacity: 0.8;
     height: 3rem;
     width: 30%;
+    min-width: 15rem;
     max-width: 300px;
     margin: 0 auto;
     transition: all .2s ease-out; }
@@ -327,13 +332,15 @@ nav {
 
 @media (min-width: 480px) and (max-width: 768px) {
   #about {
-    top: 9rem; }
+    top: 12rem; }
     #about .name {
       flex-direction: column;
       justify-content: center;
       margin-bottom: 4rem; }
     #about h1 {
       line-height: .5rem; }
+    #about h2 {
+      line-height: 2rem; }
     #about .name__last {
       margin: 0; }
     #about .blurb {
@@ -344,13 +351,15 @@ nav {
 
 @media (min-width: 0px) and (max-width: 480px) {
   #about {
-    top: 9rem; }
+    top: 10rem; }
     #about .name {
       flex-direction: column;
       justify-content: center;
       margin-bottom: 4rem; }
     #about h1 {
       line-height: .5rem; }
+    #about h2 {
+      line-height: 2rem; }
     #about .name__last {
       margin: 0; }
     #about .blurb {
@@ -381,6 +390,7 @@ nav {
 
 @media (min-width: 480px) and (max-width: 768px) {
   #links {
+    display: none;
     height: 5rem;
     top: 37.5rem;
     left: 25%;
@@ -392,6 +402,7 @@ nav {
 
 @media (min-width: 0px) and (max-width: 480px) {
   #links {
+    display: none;
     height: 5rem;
     top: 42.5rem;
     left: 25%;

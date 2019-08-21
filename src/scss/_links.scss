@@ -32,6 +32,8 @@
 // Tablet
 @media (min-width: 480px) and (max-width: 768px) {
     #links {
+        display: none;
+
         height: 5rem;
         top: 37.5rem;
         left: 25%;
@@ -46,6 +48,7 @@
 // Mobile
 @media (min-width: 0px) and (max-width: 480px) {
     #links {
+        display: none;
         height: 5rem;
         top: 42.5rem;
         left: 25%;

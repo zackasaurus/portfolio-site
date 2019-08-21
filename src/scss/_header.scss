@@ -40,6 +40,10 @@ header {
     h1 {
         color: white;
     }
+
+    img {
+        height: 40px;
+    }
 }
 
 a {
@@ -167,6 +171,13 @@ nav {
 @media (min-width: 0px) and (max-width: 768px) {
     nav {
         display: none;
+    }
+
+    #logo {
+        img {
+            height: 32px;
+        }
+
     }
 
     .menu__button {
