@@ -4,6 +4,7 @@
     left: 15%;
     height: 20rem;
     width: 70%;
+    // max-width: 700px;
     z-index: 10;
 
     .title {
@@ -22,7 +23,7 @@
         color: $color-white-1;
         font-weight: 500;
         font-size: 3rem;
-        letter-spacing: .3vw;
+        letter-spacing: 5px;
         margin-bottom: 4rem;
         text-transform: uppercase;
     }
@@ -36,7 +37,7 @@
 
     h2 {
         font-size: 1rem;
-        letter-spacing: .1vw;
+        letter-spacing: 2px;
         color: $color-white-1;
         font-weight: 300;
 
@@ -44,8 +45,10 @@
 
     .blurb {
         width: 60%;
+        max-width: 700px;
         margin: 4rem auto;
         margin-bottom: 4rem;
+        letter-spacing: 1px;
         color: $color-white-1;
 
     }
@@ -67,6 +70,7 @@
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        letter-spacing: 1px;
         // text-transform: uppercase;
         // background: rgba(250, 114, 114, 0.8);
         background: linear-gradient(to bottom right, $color-secondary-1, $color-secondary-2);
@@ -75,6 +79,7 @@
         // background: rgba(salmon, 0.5);
         height: 3rem;
         width: 30%;
+        max-width: 300px;
         margin: 0 auto;
         transition: all .2s ease-out;
         // padding-left: 1rem;
