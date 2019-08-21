@@ -55,6 +55,8 @@ export default function Waves() {
     let constant = canvas.width / 1000;
     requestAnimationFrame(animate);
     //Top
+    // let pattern = new Image();
+    // pattern
     c.fillStyle = ' #1B2631';
     c.fillRect(0, 0, canvas.width, canvas.height);
     // Bottom

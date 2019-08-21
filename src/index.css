@@ -19,6 +19,11 @@ canvas {
   overflow: hidden;
   backface-visibility: hidden; }
 
+#pattern {
+  width: 100%;
+  height: 850px;
+  position: absolute; }
+
 header {
   position: fixed;
   z-index: 1000;
@@ -599,7 +604,7 @@ nav {
     pointer-events: none;
     height: 100%;
     width: 100%;
-    opacity: 0.1;
+    opacity: 0.05;
     z-index: 1; }
   #contact h1 {
     color: ghostwhite;
