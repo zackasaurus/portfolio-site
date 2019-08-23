@@ -97,7 +97,7 @@
 
             .btn-view {
                 @extend .btn;
-                background-color: rgba($color-primary-1, 0.8);
+                background-color: rgba($color-primary-1, 0.85);
 
                 &::before {
                     content: "";
@@ -126,7 +126,7 @@
 
             .btn-github {
                 @extend .btn;
-                background-color: rgba($color-secondary-1, 0.8);
+                background-color: rgba($color-secondary-1, 0.85);
 
                 &::before {
                     content: "";
@@ -285,8 +285,43 @@
     }
 }
 
+// Big Mobile
+@media (min-width: 550px) and (max-width: 768px) {
+
+    #projects {
+        padding-bottom: 6rem;
+
+        .container {
+
+            // background: green;
+            padding: 0 20%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0vw;
+            grid-row-gap: 10vw;
+        }
+
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        .item {
+            height: 50vw;
+            max-height: none;
+        }
+
+        .btn {
+            // padding: 1rem 1.5rem;
+            padding-left: 1.5rem;
+            padding-right: 0rem;
+        }
+    }
+
+}
+
 // Mobile & Tablets
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 550px) {
 
     #projects {
         padding-bottom: 6rem;

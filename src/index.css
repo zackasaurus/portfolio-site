@@ -477,7 +477,7 @@ nav {
         #projects .item .btn-group .btn-github:hover svg {
           transform: translateX(7px); }
       #projects .item .btn-group .btn-view {
-        background-color: rgba(27, 38, 49, 0.8); }
+        background-color: rgba(27, 38, 49, 0.85); }
         #projects .item .btn-group .btn-view::before {
           content: "";
           position: absolute;
@@ -496,7 +496,7 @@ nav {
         #projects .item .btn-group .btn-view:hover {
           background-color: #1b2631; }
       #projects .item .btn-group .btn-github {
-        background-color: rgba(250, 114, 114, 0.8); }
+        background-color: rgba(250, 114, 114, 0.85); }
         #projects .item .btn-group .btn-github::before {
           content: "";
           position: absolute;
@@ -575,7 +575,25 @@ nav {
     grid-column-gap: 7.5vw;
     grid-row-gap: 7.5vw; } }
 
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 550px) and (max-width: 768px) {
+  #projects {
+    padding-bottom: 6rem; }
+    #projects .container {
+      padding: 0 20%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 0vw;
+      grid-row-gap: 10vw; }
+    #projects h3 {
+      font-size: 1rem; }
+    #projects .item {
+      height: 50vw;
+      max-height: none; }
+    #projects .btn, #projects .item .btn-group .btn-view, #projects .item .btn-group .btn-github {
+      padding-left: 1.5rem;
+      padding-right: 0rem; } }
+
+@media (min-width: 0px) and (max-width: 550px) {
   #projects {
     padding-bottom: 6rem; }
     #projects .container {
