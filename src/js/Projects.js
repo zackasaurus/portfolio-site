@@ -104,13 +104,23 @@ export default function Projects() {
           </div>
           <div className="btn-group">
             {i.view ? (
-              <a className="btn-view" href={i.view} target="_blank">
+              <a
+                className="btn-view"
+                href={i.view}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {view}
                 <span>Project</span>
               </a>
             ) : null}
             {i.github ? (
-              <a className="btn-github" href={i.github} target="_blank">
+              <a
+                className="btn-github"
+                href={i.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {github}
                 <span>Github</span>
               </a>

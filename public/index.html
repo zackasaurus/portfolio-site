@@ -5,145 +5,165 @@
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
 
-  <!-- <meta name="msapplication-TileColor" content="#da532c"> -->
-  <!-- <meta name="theme-color" content="#ffffff"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- <meta name="theme-color" content="#000000" /> -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,300i,400,700&display=swap" rel="stylesheet">
 
 
   <title>Zachary Bogard | Portfolio</title>
 </head>
 
-<body>
+<body onload="myFunction()">
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <!-- HEADER -->
-  <header>
 
-    <div id='logo'>
-      <a href="http://zachbogard.com/"><img src="%PUBLIC_URL%/svg/logo-08-19-19-01.svg" alt="Logo"></a>
-    </div>
+  <!-- PRELOAD -->
+  <div id="loader"></div>
 
-    <div id="menu-btn" class="menu__button">
-      <div class="hamburger">
-        <span class="line top"></span>
-        <span class="line middle"></span>
-        <span class="line bottom"></span>
+  <div style="display:none;" id="load">
+    <!-- HEADER -->
+    <header>
+
+      <div id='logo'>
+        <a href="http://zachbogard.com/"><img src="%PUBLIC_URL%/svg/logo-08-19-19-01.svg" alt="Logo"></a>
       </div>
-    </div>
 
-    <nav>
+      <div id="menu-btn" class="menu__button">
+        <div class="hamburger">
+          <span class="line top"></span>
+          <span class="line middle"></span>
+          <span class="line bottom"></span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#canvas" class="scroll active">About</a>
+        <a href="#projects" class="scroll">Projects</a>
+        <a href="#contact" class="scroll">Contact</a>
+      </nav>
+    </header>
+
+    <!-- MENU SLIDE -->
+    <section class="menu__slide">
       <a href="#canvas" class="scroll active">About</a>
       <a href="#projects" class="scroll">Projects</a>
       <a href="#contact" class="scroll">Contact</a>
-    </nav>
-  </header>
+    </section>
 
-  <!-- MENU SLIDE -->
-  <section class="menu__slide">
-    <a href="#canvas" class="scroll active">About</a>
-    <a href="#projects" class="scroll">Projects</a>
-    <a href="#contact" class="scroll">Contact</a>
-  </section>
+    <!-- PATTERN OVERLAY -->
+    <div id="pattern"></div>
 
-  <!-- PATTERN OVERLAY -->
-  <div id="pattern"></div>
+    <!-- CANVAS -->
+    <canvas id="canvas"></canvas>
 
-  <!-- CANVAS -->
-  <canvas id="canvas"></canvas>
-
-  <!-- LINKS -->
-  <div id="links">
-    <a href="https://www.linkedin.com/in/zachbogard/" target="_blank">
-      <img src="%PUBLIC_URL%/svg/document-1-01.svg" height="28px" alt="LinkedIn">
-    </a>
-    <a href="https://www.linkedin.com/in/zachbogard/" target="_blank">
-      <img src="%PUBLIC_URL%/svg/linkedin-01.svg" height="28px" alt="LinkedIn">
-    </a>
-    <a href="https://github.com/zackasaurus" target="_blank">
-      <img src="%PUBLIC_URL%/svg/github-01.svg" height="28px" alt="Github">
-    </a>
-    <a href="https://www.behance.net/zacharybogard" target="_blank">
-      <img src="%PUBLIC_URL%/svg/behance-01.svg" height="28px" alt="Behance">
-    </a>
-    <a href="https://codepen.io/zackasaurus/" target="_blank">
-      <img src="%PUBLIC_URL%/svg/codepen-01.svg" height="28px" alt="Codepen">
-    </a>
-  </div>
-
-  <!-- ABOUT -->
-  <div id="about">
-    <div class="title">
-      <div class="name">
-        <h1 class="name__first">Zachary</h1>
-        <h1 class="name__last">Bogard</h1>
-      </div>
-
-      <h2>Software Developer | Designer</h2>
-      <div class="blurb">
-        <p>
-
-          I am a software developer & designer from San Diego, California. If you are in need of a new web page or
-          application, you can
-          get in touch with me <span><a href="#contact" class="scroll">here.</a></span></p>
-      </div>
-      <a class="btn__nav__contact scroll" href="#contact">
-        <span>Get In Touch</span>
-        <!-- <svg></svg> -->
-        <img src="%PUBLIC_URL%/svg/baseline-keyboard_arrow_right.svg" height="28px" alt="">
-
-
-
+    <!-- LINKS -->
+    <div id="links">
+      <a href="https://www.linkedin.com/in/zachbogard/" target="_blank">
+        <img src="%PUBLIC_URL%/svg/document-1-01.svg" height="28px" alt="LinkedIn">
       </a>
-      <!-- <button href="#contact">Get In Touch</button> -->
-
+      <a href="https://www.linkedin.com/in/zachbogard/" target="_blank">
+        <img src="%PUBLIC_URL%/svg/linkedin-01.svg" height="28px" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/zackasaurus" target="_blank">
+        <img src="%PUBLIC_URL%/svg/github-01.svg" height="28px" alt="Github">
+      </a>
+      <a href="https://www.behance.net/zacharybogard" target="_blank">
+        <img src="%PUBLIC_URL%/svg/behance-01.svg" height="28px" alt="Behance">
+      </a>
+      <a href="https://codepen.io/zackasaurus/" target="_blank">
+        <img src="%PUBLIC_URL%/svg/codepen-01.svg" height="28px" alt="Codepen">
+      </a>
     </div>
-  </div>
 
-
-
-  <!-- PROJECTS -->
-  <div id="projects">
-    <h1>Projects</h1>
-
-    <div id="project__items" class="container">
-
-    </div>
-  </div>
-
-  <!-- CONTACT -->
-  <div id="contact">
-    <img src="%PUBLIC_URL%/svg/map-01.svg" alt="">
-    <h1>Contact</h1>
-    <div class="container">
-      <form action="https://formspree.io/zachbogard@gmail.com" method="POST" class="contact-form">
-        <div class="input-group">
-          <label for="">Name:</label>
-          <input type="text" name="name" required>
+    <!-- ABOUT -->
+    <div id="about">
+      <div class="title">
+        <div class="name">
+          <h1 class="name__first">Zachary</h1>
+          <h1 class="name__last">Bogard</h1>
         </div>
 
-        <label for="email">Email:</label>
-        <input type="email" name="_replyto" required>
+        <h2>Software Developer | Designer</h2>
+        <div class="blurb">
+          <p>
 
-        <label for="">Subject:</label>
-        <input type="text" name="name" required>
+            I am a software developer & designer from San Diego, California. If you are in need of a new web page or
+            application, you can
+            get in touch with me <span><a href="#contact" class="scroll">here.</a></span></p>
+        </div>
+        <a class="btn__nav__contact scroll" href="#contact">
+          <span>Get In Touch</span>
+          <img src="%PUBLIC_URL%/svg/baseline-keyboard_arrow_right.svg" height="28px" alt="">
 
-        <label for="">Message:</label>
-        <textarea name="name" id="" rows="10"></textarea>
 
-        <button class="btn-submit" type="submit" value="Send">Submit</button>
-      </form>
+
+        </a>
+
+      </div>
+    </div>
+    <!-- PROJECTS -->
+    <div id="projects">
+      <h1>Projects</h1>
+
+      <div id="project__items" class="container">
+
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact">
+      <img src="%PUBLIC_URL%/svg/map-01.svg" alt="">
+      <h1>Contact</h1>
+      <div class="container">
+        <form action="https://formspree.io/zachbogard@gmail.com" method="POST" class="contact-form">
+          <div class="input-group">
+            <label for="">Name:</label>
+            <input type="text" name="name" required>
+          </div>
+
+          <label for="email">Email:</label>
+          <input type="email" name="_replyto" required>
+
+          <label for="">Subject:</label>
+          <input type="text" name="name" required>
+
+          <label for="">Message:</label>
+          <textarea name="name" id="" rows="10"></textarea>
+
+          <button class="btn-submit" type="submit" value="Send">Submit</button>
+        </form>
+
+
+      </div>
 
 
     </div>
 
+    <!-- FOOTER -->
+    <footer id='footer'>
+      <p> Zachary Bogard &copy; 2019 </p>
+    </footer>
 
   </div>
 
-  <!-- FOOTER -->
-  <footer id='footer'>
-    <p> Zachary Bogard &copy; 2019 </p>
-  </footer>
+  <!-- Preload Script -->
+  <script>
+    var myVar;
+
+    function myFunction() {
+      myVar = setTimeout(showPage, 0);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("load").style.display = "block";
+    }
+  </script>
+
+
+
+
+
+
+
 
 </body>
 
