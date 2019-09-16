@@ -12,13 +12,15 @@
   <title>Zachary Bogard | Portfolio</title>
 </head>
 
-<body>
+<body onload="loadSecond()">
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
   <!-- PRELOAD -->
-  <div id="loader"></div>
+  <div id="loader">
 
-  <div style="display:none;" id="load">
+  </div>
+
+  <div style="display: none" id="load">
     <!-- HEADER -->
     <header>
 
@@ -112,10 +114,6 @@
       // setTimeout(showRest, 0);
     }
 
-    function showRest() {
-      document.getElementById("load__second").style.display = "block";
-    }
-
     function showPage() {
       document.getElementById("loader").style.display = "none";
       document.getElementById("load").style.display = "block";
@@ -128,7 +126,7 @@
   </script>
 
   <!-- REST OF PAGE -->
-  <div style="display:none;" id="load__second">
+  <div style="display: none" id="load__second">
 
     <!-- PROJECTS -->
     <div id="projects">
@@ -174,6 +172,15 @@
     </footer>
   </div>
 
+  <script>
+    function loadSecond() {
+      document.getElementById("load__second").style.display = "block";
+    }
+    //   // let loadSecond = document.querySelector('#load__second');
+
+    //   // loadSecond.style.display = 'block';
+    // }
+  </script>
 
 
 </body>

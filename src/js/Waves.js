@@ -1,38 +1,15 @@
-import $ from 'jquery';
-
 export default function Waves() {
-  const canvas = document.querySelector('canvas');
+  const canvas = document.querySelector('#canvas');
   const c = canvas.getContext('2d');
 
-  // Get Scrollbar Width
-  function getScrollbarWidth() {
-    // Creating invisible container
-    const outer = document.createElement('div');
-    outer.style.visibility = 'hidden';
-    outer.style.overflow = 'scroll'; // forcing scrollbar to appear
-    outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
-    document.body.appendChild(outer);
-
-    // Creating inner element and placing it in the container
-    const inner = document.createElement('div');
-    outer.appendChild(inner);
-
-    // Calculating difference between container's full width and the child width
-    const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
-
-    // Removing temporary elements from the DOM
-    outer.parentNode.removeChild(outer);
-
-    return scrollbarWidth;
-  }
-
+  // Height
   let h = 850;
 
-  canvas.width = window.innerWidth - getScrollbarWidth();
+  canvas.width = window.innerWidth;
   canvas.height = h;
 
   let resizeCanvas = function() {
-    canvas.width = window.innerWidth - getScrollbarWidth();
+    canvas.width = window.innerWidth;
     canvas.height = h;
     c.imageSmoothingEnabled = true;
   };
@@ -52,6 +29,7 @@ export default function Waves() {
   let increment = props.duration;
 
   function animate() {
+    console.log(canvas.width);
     let constant = canvas.width / 1000;
     requestAnimationFrame(animate);
     //Top

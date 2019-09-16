@@ -1,11 +1,12 @@
 #about {
     position: absolute;
     top: 12rem;
-    left: 15%;
     height: 20rem;
-    width: 70%;
+    width: 100%;
+    padding: 0 15%;
     // max-width: 700px;
     z-index: 10;
+
 
     .title {
         text-align: center;

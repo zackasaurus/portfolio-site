@@ -2,7 +2,7 @@
   "name": "portfolio-new",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": ".",
   "dependencies": {
     "dat-gui": "^0.5.0",
     "jquery": "^3.4.1",

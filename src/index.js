@@ -18,6 +18,6 @@ SmoothScroll();
 
 // Load
 
-let loadSecond = document.querySelector('#load__second');
+// let loadSecond = document.querySelector('#load__second');
 
-loadSecond.style.display = 'block';
+// loadSecond.style.display = 'block';
