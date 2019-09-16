@@ -6,13 +6,13 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,300i,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
 
 
   <title>Zachary Bogard | Portfolio</title>
 </head>
 
-<body onload="myFunction()">
+<body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
   <!-- PRELOAD -->
@@ -99,6 +99,37 @@
 
       </div>
     </div>
+
+
+  </div>
+
+  <!-- PRELOAD -->
+  <script>
+    var myVar;
+
+    function myFunction() {
+      setTimeout(showPage, 0);
+      // setTimeout(showRest, 0);
+    }
+
+    function showRest() {
+      document.getElementById("load__second").style.display = "block";
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("load").style.display = "block";
+      // showRest()
+
+
+    }
+
+    myFunction();
+  </script>
+
+  <!-- REST OF PAGE -->
+  <div style="display:none;" id="load__second">
+
     <!-- PROJECTS -->
     <div id="projects">
       <h1>Projects</h1>
@@ -141,27 +172,7 @@
     <footer id='footer'>
       <p> Zachary Bogard &copy; 2019 </p>
     </footer>
-
   </div>
-
-  <!-- Preload Script -->
-  <script>
-    var myVar;
-
-    function myFunction() {
-      myVar = setTimeout(showPage, 0);
-    }
-
-    function showPage() {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("load").style.display = "block";
-    }
-  </script>
-
-
-
-
-
 
 
 

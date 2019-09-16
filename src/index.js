@@ -1,23 +1,23 @@
 import './index.css';
-import Projects from './js/Projects'
-import SmoothScroll from './js/SmoothScroll'
-import MenuToggle from './js/MenuToggle'
-import Waves from './js/Waves'
+import Projects from './js/Projects';
+import SmoothScroll from './js/SmoothScroll';
+import MenuToggle from './js/MenuToggle';
+import Waves from './js/Waves';
 
 // Projects
-Projects()
+Projects();
 
 // Canvas Wave Animation
-Waves()
+Waves();
 
 // Menu Toggle
-MenuToggle()
+MenuToggle();
 
 // Smooth Scroll
-SmoothScroll()
+SmoothScroll();
 
+// Load
 
+let loadSecond = document.querySelector('#load__second');
 
-
-
-
+loadSecond.style.display = 'block';

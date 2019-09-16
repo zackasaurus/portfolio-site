@@ -48,7 +48,8 @@
     animation-duration: 1s
 }
 
-#load {
+#load,
+#load__second {
     // transition: .5s ease all;
     animation-name: animateopacity;
     animation-duration: .3s;

@@ -35,7 +35,8 @@
   animation-name: animatebottom;
   animation-duration: 1s; }
 
-#load {
+#load,
+#load__second {
   animation-name: animateopacity;
   animation-duration: .3s; }
 
